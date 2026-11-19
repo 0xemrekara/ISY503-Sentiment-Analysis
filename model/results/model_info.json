@@ -1,0 +1,24 @@
+{
+  "mode": "TEAM",
+  "category": "Electronics",
+  "selection": "CANDIDATE_v8",
+  "model": "Embedding + Conv1D + GlobalMaxPooling1D + Dense + Dropout + Sigmoid",
+  "seq_len": 256,
+  "dropout": 0.5,
+  "threshold": 0.5,
+  "label_map": {
+    "0": "Negative review",
+    "1": "Positive review"
+  },
+  "seed": 42,
+  "train_count": 1572,
+  "val_count": 195,
+  "test_count": 198,
+  "baseline_val_loss": 0.410314153577867,
+  "candidate_val_loss": 0.39161287223445984,
+  "validation_selected_candidate": true,
+  "test_accuracy": 0.9040404040404041,
+  "test_macro_f1": 0.9039203166900779,
+  "tensorflow_version": "2.21.0",
+  "python_version": "3.13.18"
+}

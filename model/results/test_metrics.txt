@@ -1,0 +1,12 @@
+Model: CANDIDATE_v8
+Accuracy: 0.904040
+Macro F1: 0.903920
+
+              precision    recall  f1-score   support
+
+    Negative       0.92      0.88      0.90        98
+    Positive       0.89      0.93      0.91       100
+
+    accuracy                           0.90       198
+   macro avg       0.91      0.90      0.90       198
+weighted avg       0.91      0.90      0.90       198
