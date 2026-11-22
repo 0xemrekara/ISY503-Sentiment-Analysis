@@ -1,0 +1,35 @@
+ISY503 Assessment 3 – Data Preparation Summary
+Electronics category only (Johns Hopkins Multi-Domain Sentiment Dataset)
+============================================================
+
+Raw reviews loaded:          2000
+Removed – duplicates:        34
+Removed – empty after clean: 0
+Removed – too short (<5 words): 0
+Removed – label/rating mismatch: 0
+Retained after filtering:    1966
+
+Split (seed=42, 80/10/10, stratified by label):
+  Train:  1572  |  pos=789 (50.2%), neg=783 (49.8%)
+  Val:     195  |  pos=98 (50.3%), neg=97 (49.7%)
+  Test:    199  |  pos=100 (50.3%), neg=99 (49.7%)
+
+Cleaning notes:
+- Light normalisation only (whitespace, lowercasing, removal of non-essential special characters).
+- Sentiment-bearing words (not, never, bad, no, etc.) were deliberately preserved.
+- Title text was concatenated with the review body.
+- Exact duplicate texts were removed so no review appears in more than one split.
+
+Label quality notes:
+- Clear mismatches (positive file with rating ≤2 or negative with rating ≥4) removed: 0
+- Original positive/negative files in this dataset are generally consistent with star ratings (4–5 vs 1–2).
+
+Ethical / bias considerations for the report:
+- Dataset is from ~2007; language, product types, and reviewer demographics reflect that period.
+- Electronics reviews may over-represent certain product categories (e.g. cameras, audio, computers).
+- Star-rating → binary conversion discards nuance (3-star reviews are absent from the labelled files).
+- Possible selection bias in which reviews Amazon surfaced or which the original authors sampled.
+
+Output files (columns: text, label):
+- train.csv, val.csv, test.csv
+  label 0 = Negative, 1 = Positive
